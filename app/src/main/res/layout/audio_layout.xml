@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+    android:background="#FFFFFF"
+
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingTop="16dp"
+    android:paddingBottom="16dp"
+
+    >
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:text="Song 1"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        android:maxWidth="250dp"
+
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:text="0:04 / 3:33"
+        android:textSize="14dp"
+        android:layout_marginRight="16dp"
+        app:layout_constraintBottom_toTopOf="@id/seekBar"
+        app:layout_constraintRight_toRightOf="parent"
+        android:textStyle="bold"
+        android:maxWidth="250dp"
+        android:visibility="visible"
+       />
+
+
+    <ImageView
+        android:id="@+id/play_button"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/play_audio"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/tvTitle"
+        />
+
+    <SeekBar
+        android:id="@+id/seekBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:saveEnabled="false"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvTitle"
+        android:layout_marginTop="30dp"
+        />
+    <!--    <TextView-->
+    <!--        android:id="@+id/btnPlay"-->
+    <!--        android:layout_width="70dp"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:gravity="center"-->
+    <!--        android:background="@color/purple_200"-->
+    <!--        android:text="Play"-->
+    <!--        android:textSize="20sp" />-->
+
+</androidx.constraintlayout.widget.ConstraintLayout>
